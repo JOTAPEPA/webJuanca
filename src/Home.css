@@ -1,0 +1,413 @@
+body {
+    font-family: system-ui;
+    background-color: wihite;
+    
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.headerLogo {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.header Button {
+  margin: 0 0.5em;
+  background-color: #007bff;
+}
+
+.header img {
+    height: 100px;
+    width: auto;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+
+.firstMainContent{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstMainContent h1{
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.firstMainContent p{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.firstMainContentButtons{
+    padding-top: 2em;
+    display: flex;
+    gap: 1em;
+}
+.carrousel{
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.carrousel::-webkit-scrollbar{
+    display: none;
+} 
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 20s infinite linear;
+    padding-right: 1em;
+}
+
+.card{
+    flex: 0 0 10em;
+    height: 10em;
+    padding: 1em;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .2em;
+}
+
+@keyframes spin {
+    from { translate: 0; }
+    to { translate: -100%; }
+}
+
+.aditionalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#007bff;
+    height: 350px;
+    margin-bottom: 70px;
+    color: white;
+}
+
+.aditionalContent h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.aditionalContentHr {
+    width: 60px;
+    height: 4px;
+    background-Color: white;
+    margin: 20px auto;
+}
+
+
+.quienSomosTitle {
+    margin-left: 4em;
+}
+
+.quienSomosTitle h1 {
+    font-size: 2em;
+}
+
+.quienSomosContent {
+    display: flex;
+}
+
+.quienSomosText {
+    width: 60%;
+    padding: 2em;
+}
+
+.quienSomosText p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.quienSomosImage {
+    width: 40%;
+    padding: 2em;
+}
+
+.servicios {
+    display: flex;
+    margin: 4em;
+    justify-content: center;
+}
+
+.serviciosTitle {
+    margin-top: 2em;
+    font-size: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.columnaServicios {
+    width: 30%;
+    margin: 0 1em;
+}
+
+.columnaServicios img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.serviciosText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #007bff;
+    padding: 2em;
+    height: 50%;
+}
+
+.serviciosText h1 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.serviciosText p {
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.columnaServicios img{
+     width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: .2em;
+}
+
+.carrouselGaleria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 0;
+    padding: 0 1.5em;
+}
+
+.galeriaTitle {
+    margin-top: 2em;
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.contacto {
+    padding: 4em 2em;
+}
+
+.contactoTitle {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.contactoContent {
+    display: flex;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.contactoInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+.contactoInfo p {
+    margin: 0;
+}
+
+.whatsappLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #25d366;
+    color: white;
+    padding: 0.8em 1.2em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.whatsappLink:hover {
+    background-color: #1eb855;
+}
+
+.contactoMapa {
+    flex: 1;
+    min-height: 350px;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   RESPONSIVE
+   Media queries agrupadas para fácil revisión
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .servicios {
+        flex-direction: column;
+        align-items: center;
+        margin: 2em;
+    }
+
+    .columnaServicios {
+        width: 85%;
+        margin: 1em 0;
+    }
+
+    .quienSomosTitle {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 0.5em;
+        padding: 0.75em;
+    }
+
+    .header img {
+        height: 60px;
+    }
+
+    .header Button {
+        margin: 0.25em;
+        padding: 0.5em 0.8em;
+        font-size: 0.9em;
+    }
+
+    .header-left,
+    .header-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .firstMainContent {
+        margin-top: 40px;
+        padding: 0 1em;
+        text-align: center;
+    }
+
+    .firstMainContent h1 {
+        font-size: 1.6em;
+    }
+
+    .firstMainContent p {
+        font-size: 0.95em;
+    }
+
+    .firstMainContentButtons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .firstMainContentButtons Button {
+        width: 80%;
+    }
+
+    .card {
+        flex-basis: 6em;
+        height: 6em;
+        font-size: 2rem;
+    }
+
+    .carrousel {
+        margin: 60px auto;
+    }
+
+    .aditionalContent {
+        height: auto;
+        padding: 2em 1em;
+        margin-bottom: 40px;
+    }
+
+    .aditionalContent p {
+        font-size: 1.3em;
+    }
+
+    .quienSomosTitle {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .quienSomosContent {
+        flex-direction: column;
+    }
+
+    .quienSomosText,
+    .quienSomosImage {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .columnaServicios {
+        width: 100%;
+    }
+
+    .servicios {
+        margin: 1.5em;
+    }
+
+    .contacto {
+        padding: 2em 1em;
+    }
+
+    .contactoContent {
+        flex-direction: column;
+    }
+
+    .contactoMapa {
+        min-height: 250px;
+    }
+
+    .whatsappLink {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+
