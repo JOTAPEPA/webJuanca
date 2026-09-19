@@ -43,7 +43,7 @@ export function Home() {
             Servicios
           </Button>
         </div>
-        <img src="/logo.png" alt="Logo"></img>
+        <img src="https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854603/Logo_Mecarci_2019_1_sf9mv3.png" alt="Logo"></img>
         <div className="header-right">
           <Button
             onClick={() =>
@@ -426,5 +426,53 @@ const items = [
   {
     label: "Galeria10",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848933/IMG_20260210_114646_zhy04j.jpg",
+  },
+  {
+    label: "Galeria11",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789852857/IMG_20260711_125615_opckd1.jpg",
+  },
+  {
+    label: "Galeria12",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853780/IMG_20250502_100931_oftksb.jpg",
+  },
+  {
+    label: "Galeria13",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853822/IMG_20240318_170646_jdxnlj.jpg",
+  },
+  {
+    label: "Galeria14",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853882/IMG_20231214_122041_hebmav.jpg",
+  },
+  {
+    label: "Galeria15",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853965/IMG_20230322_091649_tixchd.jpg",
+  },
+  {
+    label: "Galeria16",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854021/IMG_20220408_175022_ysezsl.jpg",
+  },
+  {
+    label: "Galeria17",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854060/IMG_20220311_194702_jexrrt.jpg",
+  },
+   {
+    label: "Galeria18",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854178/IMG_20201120_175557_tl7hyf.jpg",
+  },
+  {
+    label: "Galeria19",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854212/IMG-20250721-WA0014_1_rary4p.jpg",
+  },
+  {
+    label: "Galeria20",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854261/IMG-20250721-WA0012_os0pum.jpg",
+  },
+  {
+    label: "Galeria21",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854331/1789574076569_nsaxuv.jpg",
+  },
+  {
+    label: "Galeria22",
+    url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854400/1789069524638_alrfaj.jpg",
   },
 ];
