@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import {
   Button,
@@ -13,6 +13,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export function Home() {
   const [showTopBtn, setShowTopBtn] = useState(false);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setShowTopBtn(window.scrollY > 300);
@@ -20,9 +21,24 @@ export function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    const updateHeight = () => {
+      document.documentElement.style.setProperty(
+        "--header-height",
+        `${header.offsetHeight}px`
+      );
+    };
+    updateHeight();
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="mainContainer">
-      <header className="header">
+      <header className="header" ref={headerRef}>
         <div className="header-left">
           <Button
             onClick={() =>
@@ -31,7 +47,7 @@ export function Home() {
                 .scrollIntoView({ behavior: "smooth" })
             }
           >
-            Quienes somos
+            Quiénes somos
           </Button>
           <Button
             onClick={() =>
@@ -189,14 +205,14 @@ export function Home() {
           <div className="aditionalContentHr"></div>
         </div>
         <div id="quienSomos" className="quienSomosTitle">
-          <h1>Quienes somos?</h1>
+          <h1>¿Quiénes somos?</h1>
           <Stack gap="4">
             <Separator size="lg" />
           </Stack>
           <div className="quienSomosContent">
             <div className="quienSomosText">
               <p>
-                MECARCI S.A.S. <br></br> <br></br>Mecanizados Arciniegas Somos
+                MECARCI S.A.S. <br></br> <br></br>Mecanizados Arciniegas. Somos
                 un aliado de la industria en general. Aportamos experiencia,
                 capacidad técnica y equipos en máquinas herramientas para
                 resolver las necesidades de mecanizado, reparación y fabricación
@@ -333,7 +349,7 @@ export function Home() {
               </p>
               <p>
                 <strong>Dirección:</strong> CALLE 23H 104B-57, Bodega # 1
-                Fontibon
+                Fontibón
               </p>
               <p>
                 <strong>Teléfono:</strong> +57 313 265 3700
@@ -388,91 +404,91 @@ export function Home() {
 
 const items = [
   {
-    label: "Galeria1",
+    label: "Galería 1",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848120/galeria1_ksmp7e.jpg",
   },
   {
-    label: "Galeria2",
+    label: "Galería 2",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848190/IMG_20260711_124349_auepbe.jpg",
   },
   {
-    label: "Galeria3",
+    label: "Galería 3",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848231/IMG_20260216_160348_ejtw4w.jpg",
   },
   {
-    label: "Galeria4",
+    label: "Galería 4",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848351/galeria4_sors16.jpg",
   },
   {
-    label: "Galeria5",
+    label: "Galería 5",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848401/galeria5_o8uyux.jpg",
   },
   {
-    label: "Galeria6",
+    label: "Galería 6",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848453/IMG_20240314_083656_xzdelq.jpg",
   },
   {
-    label: "Galeria7",
+    label: "Galería 7",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848792/IMG_20231220_100206_nmjpyl.jpg",
   },
   {
-    label: "Galeria8",
+    label: "Galería 8",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848995/IMG_20251107_075127_vihv6v.jpg",
   },
   {
-    label: "Galeria9",
+    label: "Galería 9",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848885/galeria8_fnodhb.jpg",
   },
   {
-    label: "Galeria10",
+    label: "Galería 10",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789848933/IMG_20260210_114646_zhy04j.jpg",
   },
   {
-    label: "Galeria11",
+    label: "Galería 11",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789852857/IMG_20260711_125615_opckd1.jpg",
   },
   {
-    label: "Galeria12",
+    label: "Galería 12",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853780/IMG_20250502_100931_oftksb.jpg",
   },
   {
-    label: "Galeria13",
+    label: "Galería 13",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853822/IMG_20240318_170646_jdxnlj.jpg",
   },
   {
-    label: "Galeria14",
+    label: "Galería 14",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853882/IMG_20231214_122041_hebmav.jpg",
   },
   {
-    label: "Galeria15",
+    label: "Galería 15",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789853965/IMG_20230322_091649_tixchd.jpg",
   },
   {
-    label: "Galeria16",
+    label: "Galería 16",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854021/IMG_20220408_175022_ysezsl.jpg",
   },
   {
-    label: "Galeria17",
+    label: "Galería 17",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854060/IMG_20220311_194702_jexrrt.jpg",
   },
    {
-    label: "Galeria18",
+    label: "Galería 18",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854178/IMG_20201120_175557_tl7hyf.jpg",
   },
   {
-    label: "Galeria19",
+    label: "Galería 19",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854212/IMG-20250721-WA0014_1_rary4p.jpg",
   },
   {
-    label: "Galeria20",
+    label: "Galería 20",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854261/IMG-20250721-WA0012_os0pum.jpg",
   },
   {
-    label: "Galeria21",
+    label: "Galería 21",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854331/1789574076569_nsaxuv.jpg",
   },
   {
-    label: "Galeria22",
+    label: "Galería 22",
     url: "https://res.cloudinary.com/dvqn0avdc/image/upload/v1789854400/1789069524638_alrfaj.jpg",
   },
 ];

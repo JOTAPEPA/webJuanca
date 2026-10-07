@@ -1,13 +1,35 @@
+html {
+    color-scheme: light;
+}
+
 body {
     font-family: system-ui;
-    background-color: wihite;
-    
+    background-color: white;
+    color: #1a202c;
 }
 
 .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     padding: 1em;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.mainContent {
+    padding-top: var(--header-height, 132px);
+}
+
+#quienSomos,
+#servicios,
+#galeria,
+#contacto {
+    scroll-margin-top: var(--header-height, 132px);
 }
 
 .headerLogo {
